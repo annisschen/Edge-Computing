@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>客户端</title>
+    <script src="./javascripts/axios.min.js"></script>
+    <script>
+        window.onload = function () {
+            document.getElementById('file').onchange = function (event) {
+                let file = event.target.files[0];
+                let param = new FormData();
+                param.append("myFile",file);
+                let config = {
+                    header: {'Content-Type':"multipart/form-data"}
+                };
+                axios.post('/upload',param,config)
+                    .then((msg)=>{
+                        console.log(msg);
+                    }).catch((err)=>{
+                        console.log(err)
+                })
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="file" name="myFile" id="file">
+</body>
+</html>
