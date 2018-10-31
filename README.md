@@ -118,3 +118,5 @@ router.post('/result',upload.single("result"),(req,res,next)=>{
 ### 4. 测试
 内部测试：我们组内电脑互联实现跑机器学习代码  
 外部测试：拿舍友电脑跑机器学习代码
+
+### 5. `命令`文件夹是我在windows上写的运行脚本
