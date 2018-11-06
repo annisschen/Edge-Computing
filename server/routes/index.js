@@ -51,8 +51,10 @@ result_list = [];
 router.get('/download/:file', (req, res)=>{
 
     var file=req.params.file;
-    res.sendFile(file, {root: "D:\\homework\\bigProject\\server\\bin\\uploads\\"}, err => {
-});});
+    console.log(file);
+    res.sendFile(file, {root: 'D:\\homework\\Edge-Computing-master\\server\\bin\\uploads\\'}, err => {
+    });
+});
 
 router.get('/get/:file', (req, res)=>{
     res.set("Content-Type", "charset=utf-8");
